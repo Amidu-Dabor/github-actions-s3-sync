@@ -16,8 +16,8 @@ jobs:
           template: rclone.template.conf
           output_file: rclone.prod.conf
           variables: |
-            CONFIG_AWS_ACCESS_KEY_ID={{ secrets.AWS_ACCESS_KEY_ID }}
-            CONFIG_AWS_SECRET_ACCESS_KEY={{ secrets.AWS_SECRET_ACCESS_KEY }}
-            CONFIG_FILEBASE_ACCESS_KEY_ID={{ secrets.FILEBASE_ACCESS_KEY_ID }}
-            CONFIG_FILEBASE_SECRET_ACCESS_KEY={{ secrets.FILEBASE_SECRET_ACCESS_KEY }}
+            RCLONE_CONFIG_AWS_ACCESS_KEY_ID={{ secrets.AWS_ACCESS_KEY_ID }}
+            RCLONE_CONFIG_AWS_SECRET_ACCESS_KEY={{ secrets.AWS_SECRET_ACCESS_KEY }}
+            RCLONE_CONFIG_FILEBASE_ACCESS_KEY_ID={{ secrets.FILEBASE_ACCESS_KEY_ID }}
+            RCLONE_CONFIG_FILEBASE_SECRET_ACCESS_KEY={{ secrets.FILEBASE_SECRET_ACCESS_KEY }}
       - run: cat rclone.prod.conf
