@@ -10,3 +10,4 @@ jobs:
       - run: echo 'Hello from S3 sync'
       - name: Install Rclone
         run: sudo -v ; curl https://rclone.org/install.sh | sudo bash
+      - uses: actions/checkout@v4.1.7
