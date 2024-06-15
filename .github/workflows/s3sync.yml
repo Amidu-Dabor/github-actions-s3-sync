@@ -21,3 +21,5 @@ jobs:
             RCLONE_CONFIG_FILEBASE_ACCESS_KEY_ID={{ secrets.FILEBASE_ACCESS_KEY_ID }}
             RCLONE_CONFIG_FILEBASE_SECRET_ACCESS_KEY={{ secrets.FILEBASE_SECRET_ACCESS_KEY }}
       - run: cat rclone.prod.conf
+      - name: Execute Rclone Sync Job
+        run: rsync --config=rclone.prod.conf sync s3source:dabsawss3bucket filebasedestination:dabsfilebases3bucket
