@@ -14,7 +14,7 @@ jobs:
       - uses: cuchi/jinja2-action@v1.2.2
         with:
           template: rclone.template.conf
-          output: rclone.prod.conf
+          output_file: rclone.prod.conf
           variables: |
             CONFIG_AWS_ACCESS_KEY_ID={{ secrets.AWS_ACCESS_KEY_ID }}
             CONFIG_AWS_SECRET_ACCESS_KEY={{ secrets.AWS_SECRET_ACCESS_KEY }}
